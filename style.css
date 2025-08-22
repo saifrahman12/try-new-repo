@@ -1,0 +1,128 @@
+/* Pengaturan dasar dan tema */
+:root {
+    --primary-color: #007acc;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg-color: #ffffff;
+    --header-footer-bg: #2d2d2d;
+    --header-footer-text: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema Gelap */
+body.dark-theme {
+    --primary-color: #4db8ff;
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --card-bg-color: #2d2d2d;
+    --header-footer-bg: #1a1a1a;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header dan Footer */
+header, footer {
+    background: var(--header-footer-bg);
+    color: var(--header-footer-text);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigasi */
+nav {
+    background: #555;
+    padding: 0.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Konten Utama (Section) */
+section {
+    background: var(--card-bg-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+}
+
+/* Blok Kode */
+pre {
+    background: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Tombol */
+button {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Garis Pemisah */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+body.dark-theme hr {
+    background: #444;
+}
+
+/* Gambar */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 15px auto;
+}

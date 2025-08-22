@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar ESP32</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Selamat Datang di Dunia ESP32</h1>
+        <p>Panduan Lengkap untuk Memulai dengan Mikrokontroler Canggih</p>
+    </header>
+
+    <nav>
+        <a href="#pengenalan">Pengenalan</a>
+        <a href="#fitur">Fitur Utama</a>
+        <a href="#memulai">Cara Memulai</a>
+        <a href="#contoh-kode">Contoh Kode</a>
+    </nav>
+
+    <main class="container">
+        <section id="pengenalan">
+            <h2>Apa itu ESP32?</h2>
+            
+            <p>
+                ESP32 adalah seri mikrokontroler System-on-a-Chip (SoC) berbiaya rendah dan berdaya rendah yang dikembangkan oleh Espressif Systems. Ini adalah penerus dari ESP8266 yang populer. ESP32 mengintegrasikan CPU, Wi-Fi, dan Bluetooth dual-mode dalam satu chip, menjadikannya pilihan ideal untuk proyek Internet of Things (IoT), perangkat wearable, dan proyek elektronik cerdas lainnya.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="fitur">
+            <h2>Fitur Utama ESP32</h2>
+            <ul>
+                <li><strong>Prosesor Dual-Core:</strong> Sebagian besar varian ESP32 hadir dengan CPU dual-core Tensilica Xtensa LX6, yang memungkinkan pemrosesan yang kuat dan efisien.</li>
+                <li><strong>Konektivitas Nirkabel:</strong> Dilengkapi dengan Wi-Fi (802.11 b/g/n) dan Bluetooth (Classic dan BLE - Bluetooth Low Energy) terintegrasi.</li>
+                <li><strong>Pin Input/Output:</strong> Memiliki banyak pin GPIO yang dapat dikonfigurasi untuk berbagai keperluan seperti I2C, SPI, UART, ADC (Analog-to-Digital Converter), dan DAC (Digital-to-Analog Converter).</li>
+                <li><strong>Keamanan:</strong> Mendukung berbagai fitur keamanan perangkat keras seperti enkripsi flash dan secure boot.</li>
+                <li><strong>Daya Rendah:</strong> Dirancang dengan mode tidur nyenyak (deep sleep) untuk menghemat daya, sangat cocok untuk aplikasi bertenaga baterai.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="memulai">
+            <h2>Bagaimana Cara Memulai?</h2>
+            <p>Cara termudah untuk memprogram ESP32 adalah dengan menggunakan <strong>Arduino IDE</strong>. Berikut langkah-langkah dasarnya:</p>
+            <ol>
+                <li>Unduh dan instal Arduino IDE dari situs resminya.</li>
+                <li>Buka Arduino IDE, pergi ke <strong>File > Preferences</strong>.</li>
+                <li>Masukkan URL berikut di "Additional Board Manager URLs": <br><code>https://dl.espressif.com/dl/package_esp32_index.json</code></li>
+                <li>Buka <strong>Tools > Board > Boards Manager</strong>, cari "esp32" dan instal paketnya.</li>
+                <li>Setelah terinstal, pilih board ESP32 Anda dari menu <strong>Tools > Board</strong> (misalnya: "ESP32 Dev Module").</li>
+                <li>Pilih Port COM yang benar dan Anda siap untuk mengunggah kode pertama Anda!</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section id="contoh-kode">
+            <h2>Contoh Kode: LED Berkedip (Blink)</h2>
+            <p>Ini adalah program "Hello, World!" dalam dunia mikrokontroler. Kode ini akan membuat LED internal pada board ESP32 Anda berkedip setiap satu detik.</p>
+            <pre><code>// Mendefinisikan pin LED_BUILTIN (biasanya pin 2 pada banyak board ESP32)
+#define LED_PIN 2
+
+void setup() {
+  // Mengatur pin LED sebagai output
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);   // Menyalakan LED
+  delay(1000);                   // Tunggu selama 1 detik
+  digitalWrite(LED_PIN, LOW);    // Mematikan LED
+  delay(1000);                   // Tunggu selama 1 detik
+}</code></pre>
+            <button id="theme-toggle">Ubah Tema</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Panduan ESP32 Sederhana. Dibuat untuk tujuan edukasi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
